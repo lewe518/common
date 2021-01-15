@@ -16,3 +16,11 @@ ObjectComparator comparator = new ObjectComparator();
 comparator.setBasicComparator(DateTime.class, (ComparePredicate<DateTime, DateTime>) Objects::equals);
 comparator.compare(instance1, instance2, MyClass.class);
 ```
+
+### ObjectNullableValidator
+> 对象校验器
+```java
+ObjectNullableValidator validator = new ObjectNullableValidator();
+validator.setBasicValidator(String.class, s -> s != null && !"".equals(s));
+Assert.assertFalse(validator.validate(new User(1, "")));
+```
