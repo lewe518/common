@@ -7,3 +7,12 @@ ObjectFiller filler = new ObjectFiller();
 filler.setObjDefaultValue(DateTime.class, DateTime.now());// 自定义类型默认值
 MyClass obj = filler.fill(MyClass.class);
 ```
+
+### ObjectComparator
+> 对象比较
+```java
+ObjectComparator comparator = new ObjectComparator();
+// 自定义类型比较器
+comparator.setBasicComparator(DateTime.class, (ComparePredicate<DateTime, DateTime>) Objects::equals);
+comparator.compare(instance1, instance2, MyClass.class);
+```
