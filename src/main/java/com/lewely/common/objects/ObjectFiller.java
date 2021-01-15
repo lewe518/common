@@ -1,6 +1,7 @@
-package com.lewely.common;
+package com.lewely.common.objects;
 
 
+import com.lewely.common.util.ReflectionUtils;
 import com.lewely.common.exception.ObjectFillException;
 
 import java.lang.reflect.Field;

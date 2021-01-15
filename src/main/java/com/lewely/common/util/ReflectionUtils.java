@@ -1,4 +1,4 @@
-package com.lewely.common;
+package com.lewely.common.util;
 
 import java.lang.reflect.Field;
 import java.util.*;
